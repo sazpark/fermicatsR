@@ -2,7 +2,7 @@ Package: fermicatsR
 Title: Fermi LAT Catalogs
 Version: 1.2
 Authors@R: 'Pablo Saz Parkinson <sazpark2@gmail.com> [aut,cre]'
-Description: A list of Fermi Large Area Telescope (LAT) catalogs and lists of gamma-ray sources and pulsars. 
+Description: A list of Fermi Large Area Telescope (LAT) catalogs and lists of gamma-ray sources and pulsars.
 Depends:
     R (>= 3.1.0) 
 License: CC0
