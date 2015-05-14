@@ -7,4 +7,4 @@ Depends:
     R (>= 3.1.0) 
 License: CC0
 LazyData: true
-URL: http://fermi.gsfc.nasa.gov/ssc/data/access/
+URL: https://github.com/sazpark/fermicatsR.git
