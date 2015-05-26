@@ -4,7 +4,7 @@
 \name{fermicatsR}
 \alias{fermicatsR}
 \alias{fermicatsR-package}
-\title{fermicatsR: A package containing catalogs from the Fermi Large Area Telescope.}
+\title{fermicatsR (v 1.3): A package containing catalogs from the Fermi Large Area Telescope.}
 \description{
 Since its launch from the Kennedy Space Center on the 11th of June 2008, the Large Area Telescope (LAT, \url{https://www-glast.stanford.edu}), on board the Fermi Gamma-ray
 Space Telescope (formerly GLAST) has been performing an all-sky survey of the gamma-ray sky at energies between 20 MeV and

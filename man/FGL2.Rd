@@ -87,7 +87,10 @@ FGL2
 \description{
 Fermi Large Area Telescope Second Source Catalog (2FGL).
 Nolan, P. L. et al., The Astrophysical Journal Supplement Series, 199, 31 (2012).
-FITS Filename: gll_psc_v08.fit, released 7 August 2012.
+}
+\details{
+Initial Release: 11 July 2011
+Latest Release: gll_psc_v09.fit (18 May 2015)
 }
 \keyword{datasets}
 

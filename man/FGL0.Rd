@@ -39,5 +39,8 @@ FGL0
 Fermi Large Area Telescope Bright Gamma-ray Source List (0FGL).
 Abdo, A. A. et al., The Astrophysical Journal Supplement Series, 183, 46 (2009).
 }
+\details{
+FITS Filename: gll_psc3month_BSL_v2.fit
+}
 \keyword{datasets}
 

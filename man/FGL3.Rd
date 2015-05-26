@@ -97,7 +97,10 @@ FGL3
 \description{
 Fermi Large Area Telescope Second Source Catalog (3FGL).
 Acero, F. et al., The Astrophysical Journal Supplement Series, Accepted.
-FITS Filename: gll_psc_v15.fit, released 30 April 2015.
+}
+\details{
+Initial Release: 9 January 2015
+ Latest Release: gll_psc_v16.fit (18 May 2015)
 }
 \keyword{datasets}
 

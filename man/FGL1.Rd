@@ -84,7 +84,8 @@ Fermi Large Area Telescope First Source Catalog (1FGL).
 Abdo, A. A. et al., The Astrophysical Journal Supplement Series, 188, 405 (2010).
 }
 \details{
-FITS Filename: gll_psc_v03.fit, released 9 February 2010.
+Initial Release: 14 Jan 2010
+Latest Release: gll_psc_v03.fit (9 February 2010)
 }
 \keyword{datasets}
 

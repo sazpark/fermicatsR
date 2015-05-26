@@ -1,4 +1,4 @@
-#' fermicatsR: A package containing catalogs from the Fermi Large Area Telescope.
+#' fermicatsR (v 1.3): A package containing catalogs from the Fermi Large Area Telescope.
 #'
 #' Since its launch from the Kennedy Space Center on the 11th of June 2008, the Large Area Telescope (LAT, \url{https://www-glast.stanford.edu}), on board the Fermi Gamma-ray 
 #' Space Telescope (formerly GLAST) has been performing an all-sky survey of the gamma-ray sky at energies between 20 MeV and 
@@ -27,6 +27,8 @@ NULL
 #'
 #' Fermi Large Area Telescope Bright Gamma-ray Source List (0FGL).
 #' Abdo, A. A. et al., The Astrophysical Journal Supplement Series, 183, 46 (2009).
+#'
+#'FITS Filename: gll_psc3month_BSL_v2.fit
 #'
 #' @format A data frame with 21 variables on 205 gamma-ray sources: 
 #' \describe{
@@ -61,7 +63,8 @@ NULL
 #' Fermi Large Area Telescope First Source Catalog (1FGL).
 #' Abdo, A. A. et al., The Astrophysical Journal Supplement Series, 188, 405 (2010).
 #' 
-#' FITS Filename: gll_psc_v03.fit, released 9 February 2010.
+#' Initial Release: 14 Jan 2010
+#' Latest Release: gll_psc_v03.fit (9 February 2010)
 #'
 #' @format A data frame with 89 variables on 1451 gamma-ray sources: 
 #' \describe{
@@ -139,7 +142,9 @@ NULL
 #'
 #' Fermi Large Area Telescope Second Source Catalog (2FGL). 
 #' Nolan, P. L. et al., The Astrophysical Journal Supplement Series, 199, 31 (2012).
-#' FITS Filename: gll_psc_v08.fit, released 7 August 2012.
+#'
+#' Initial Release: 11 July 2011
+#' Latest Release: gll_psc_v09.fit (18 May 2015)
 #'
 #' @format A data frame with 137 variables on 1873 gamma-ray sources: 
 #' \describe{
@@ -222,7 +227,9 @@ NULL
 #'
 #' Fermi Large Area Telescope Second Source Catalog (3FGL).
 #' Acero, F. et al., The Astrophysical Journal Supplement Series, Accepted.
-#' FITS Filename: gll_psc_v15.fit, released 30 April 2015.
+#'
+#'  Initial Release: 9 January 2015
+#'  Latest Release: gll_psc_v16.fit (18 May 2015)
 #'
 #' @format A data frame with 224 variables on 3034 gamma-ray sources: 
 #' \describe{
@@ -395,4 +402,3 @@ NULL
 #' }
 #' @source \url{https://confluence.slac.stanford.edu/display/GLAMCOG/Public+List+of+LAT-Detected+Gamma-Ray+Pulsars}
 "pulsars"
- 
