@@ -4,7 +4,20 @@
 \name{FHL1}
 \alias{FHL1}
 \title{1FHL Catalog (First Fermi-LAT Catalog of Sources Above 10 GeV)}
-\format{A data frame with 39 variables on 514 sources:
+\format{A data frame with 39 variables on 514 sources:}
+\source{
+\url{http://fermi.gsfc.nasa.gov/ssc/data/access/lat/1FHL/}
+}
+\usage{
+FHL1
+}
+\description{
+The First Fermi-LAT Catalog of Sources Above 10 GeV (1FHL).
+Ackermann, M. et al., The Astrophysical Journal Supplement Series, 209, 34 (2013).
+FITS Filename: gll_psch_v07.fit, released 29 July 2013.
+}
+\section{Fields}{
+
 \describe{
 \item{Source_Name}{1FHL JHHMM.m+DDMM, constructed according to IAU Specifications for Nomenclature;
 m is decimal minutes of R.A.; in the name R.A. and decl. are truncated at 0.1 decimal minutes and 1' , respectively}
@@ -52,17 +65,7 @@ Star forming region (SFR), LBV star (LVB), Unassociated source (...)}
 \item{CLASS2}{Class designation for alternate association, if any}
 \item{ASSOC1}{Name of identified or most likely associated source}
 \item{ASSOC2}{Name of alternate association, if any}
-}}
-\source{
-\url{http://fermi.gsfc.nasa.gov/ssc/data/access/lat/1FHL/}
 }
-\usage{
-FHL1
-}
-\description{
-The First Fermi-LAT Catalog of Sources Above 10 GeV (1FHL).
-Ackermann, M. et al., The Astrophysical Journal Supplement Series, 209, 34 (2013).
-FITS Filename: gll_psch_v07.fit, released 29 July 2013.
 }
 \keyword{datasets}
 

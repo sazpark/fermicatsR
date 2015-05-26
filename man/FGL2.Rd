@@ -4,7 +4,23 @@
 \name{FGL2}
 \alias{FGL2}
 \title{2FGL Catalog (Fermi Large Area Telescope Second Source Catalog)}
-\format{A data frame with 137 variables on 1873 gamma-ray sources:
+\format{A data frame with 137 variables on 1873 gamma-ray sources:}
+\source{
+\url{http://fermi.gsfc.nasa.gov/ssc/data/access/lat/2yr_catalog/}
+}
+\usage{
+FGL2
+}
+\description{
+Fermi Large Area Telescope Second Source Catalog (2FGL).
+Nolan, P. L. et al., The Astrophysical Journal Supplement Series, 199, 31 (2012).
+}
+\details{
+Initial Release: 11 July 2011
+Latest Release: gll_psc_v09.fit (18 May 2015)
+}
+\section{Fields}{
+
 \describe{
 \item{Source_Name}{2FGL JHHMM.m+DDMM[c/e], constructed according to IAU Specifications for Nomenclature;
 m is decimal minutes of R.A.; in the name R.A. and decl. are truncated at 0.1 decimal minutes and 1' ,
@@ -77,20 +93,7 @@ Galactic diffuse emission; e indicates a source that was modeled as spatially ex
 \item{ASSOC1}{Name of identified or likely associated source.}
 \item{ASSOC2}{Alternate name of identified or likely associated source.}
 \item{Flags}{Binary coding. See Table 3 of 2FGL paper for the definition of the various Analysis Flags.}
-}}
-\source{
-\url{http://fermi.gsfc.nasa.gov/ssc/data/access/lat/2yr_catalog/}
 }
-\usage{
-FGL2
-}
-\description{
-Fermi Large Area Telescope Second Source Catalog (2FGL).
-Nolan, P. L. et al., The Astrophysical Journal Supplement Series, 199, 31 (2012).
-}
-\details{
-Initial Release: 11 July 2011
-Latest Release: gll_psc_v09.fit (18 May 2015)
 }
 \keyword{datasets}
 

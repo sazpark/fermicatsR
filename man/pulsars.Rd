@@ -4,7 +4,22 @@
 \name{pulsars}
 \alias{pulsars}
 \title{pulsars (Public List of LAT-Detected Gamma-Ray Pulsars)}
-\format{A data frame with 7 variables on 161 gamma-ray pulsars:
+\format{A data frame with 7 variables on 161 gamma-ray pulsars:}
+\source{
+\url{https://confluence.slac.stanford.edu/display/GLAMCOG/Public+List+of+LAT-Detected+Gamma-Ray+Pulsars}
+}
+\usage{
+pulsars
+}
+\description{
+Fermi Large Area Telescope List of Detected Pulsars
+https://confluence.slac.stanford.edu/display/GLAMCOG/Public+List+of+LAT-Detected+Gamma-Ray+Pulsars
+}
+\details{
+Last Updated: 2014-11-06
+}
+\section{Fields}{
+
 \describe{
 \item{PSR}{Pulsar name, PSR JHHMM+DDMM, constructed using the RA and Dec}
 \item{RAJ_deg}{Right Ascension, J2000, degrees}
@@ -20,19 +35,7 @@ r=Discovered in the radio and/or Gamma-ray pulsations detected using the radio e
 u=Discovered using a Fermi-LAT seed position,
 x=Discovered in the x-ray and/or Gamma-ray pulsations detected using the X-ray ephemeris.}
 \item{Refs}{References (see web page for details)}
-}}
-\source{
-\url{https://confluence.slac.stanford.edu/display/GLAMCOG/Public+List+of+LAT-Detected+Gamma-Ray+Pulsars}
 }
-\usage{
-pulsars
-}
-\description{
-Fermi Large Area Telescope List of Detected Pulsars
-https://confluence.slac.stanford.edu/display/GLAMCOG/Public+List+of+LAT-Detected+Gamma-Ray+Pulsars
-}
-\details{
-Last Updated: 2014-11-06
 }
 \keyword{datasets}
 

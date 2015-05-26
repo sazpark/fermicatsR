@@ -25,7 +25,17 @@ The following is a brief description of the data sets available within the fermi
 \item FGL3: Fermi LAT Third Source Catalog, 3034 gamma-ray sources, using 48 months of data [Acero et al., ApJS, \emph{accepted} (2015)]
 \item pulsars: Fermi LAT List of Detected Pulsars [\url{https://confluence.slac.stanford.edu/x/5Jl6Bg}], 161 gamma-ray pulsars, last updated 2014-11-06
 }
+
 For more details on any of these data sets, type 'help(dataset)' or go to the Fermi Science Support Center (FSSC) web page (\url{http://fermi.gsfc.nasa.gov/ssc/data/access/}).
-You are also more than welcome to contact me directly (\email{sazpark2@gmail.com}) with any questions.
+You can also contact me directly with your questions.
+}
+\examples{
+data(FGL2)
+if (require("ggplot2")) {
+qplot(log(Signif_Curve), log(Variability_Index), data = FGL2, color = CLASS1)
+}
+}
+\author{
+Pablo Saz Parkinson (\email{sazpark2@gmail.com})
 }
 

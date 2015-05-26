@@ -18,11 +18,19 @@
 #' \item FGL3: Fermi LAT Third Source Catalog, 3034 gamma-ray sources, using 48 months of data [Acero et al., ApJS, \emph{accepted} (2015)]
 #' \item pulsars: Fermi LAT List of Detected Pulsars [\url{https://confluence.slac.stanford.edu/x/5Jl6Bg}], 161 gamma-ray pulsars, last updated 2014-11-06
 #'}
+#'
 #' For more details on any of these data sets, type 'help(dataset)' or go to the Fermi Science Support Center (FSSC) web page (\url{http://fermi.gsfc.nasa.gov/ssc/data/access/}). 
-#' You are also more than welcome to contact me directly (\email{sazpark2@@gmail.com}) with any questions. 
+#' You can also contact me directly with your questions. 
 #' @docType package
 #' @name fermicatsR
+#' @author Pablo Saz Parkinson (\email{sazpark2@@gmail.com})
+#' @examples
+#' data(FGL2)
+#' if (require("ggplot2")) {
+#' qplot(log(Signif_Curve), log(Variability_Index), data = FGL2, color = CLASS1)
+#' }
 NULL
+
 #' 0FGL Catalog (Fermi Large Area Telescope Bright Gamma-ray Source List)
 #'
 #' Fermi Large Area Telescope Bright Gamma-ray Source List (0FGL).
@@ -30,9 +38,10 @@ NULL
 #'
 #'FITS Filename: gll_psc3month_BSL_v2.fit
 #'
-#' @format A data frame with 21 variables on 205 gamma-ray sources: 
+#' @format A data frame with 21 variables on 205 gamma-ray sources:
+#' @section Fields: 
 #' \describe{
-#' \item{Source_Name}{0FGL JHHMM.m+DDMM, constructed according to IAU Specifications for Nomenclature; 
+#' \item{\code{Source_Name}}{0FGL JHHMM.m+DDMM, constructed according to IAU Specifications for Nomenclature; 
 #' m is decimal minutes of R.A.; in the name R.A. and decl. are truncated at 0.1 decimal minutes and 1' , respectively}
 #' \item{RA}{Right Ascension, J2000, deg, 3 decimal places}
 #' \item{DEC}{Declination, J2000, deg, 3 decimal places}
@@ -67,6 +76,7 @@ NULL
 #' Latest Release: gll_psc_v03.fit (9 February 2010)
 #'
 #' @format A data frame with 89 variables on 1451 gamma-ray sources: 
+#' @section Fields: 
 #' \describe{
 #' \item{Source_Name}{1FGL JHHMM.m+DDMM[c], constructed according to IAU Specifications for Nomenclature; 
 #' m is decimal minutes of R.A.; in the name R.A. and decl. are truncated at 0.1 decimal minutes and 1' , 
@@ -147,6 +157,7 @@ NULL
 #' Latest Release: gll_psc_v09.fit (18 May 2015)
 #'
 #' @format A data frame with 137 variables on 1873 gamma-ray sources: 
+#' @section Fields: 
 #' \describe{
 #' \item{Source_Name}{2FGL JHHMM.m+DDMM[c/e], constructed according to IAU Specifications for Nomenclature; 
 #' m is decimal minutes of R.A.; in the name R.A. and decl. are truncated at 0.1 decimal minutes and 1' , 
@@ -232,6 +243,7 @@ NULL
 #'  Latest Release: gll_psc_v16.fit (18 May 2015)
 #'
 #' @format A data frame with 224 variables on 3034 gamma-ray sources: 
+#' @section Fields: 
 #' \describe{
 #' \item{Source_Name}{3FGL JHHMM.m+DDMM[c/e], constructed according to IAU Specifications for Nomenclature; 
 #' m is decimal minutes of R.A.; in the name R.A. and decl. are truncated at 0.1 decimal minutes and 1' , 
@@ -325,6 +337,7 @@ NULL
 #' FITS Filename: gll_psch_v07.fit, released 29 July 2013.
 #'
 #' @format A data frame with 39 variables on 514 sources: 
+#' @section Fields: 
 #' \describe{
 #' \item{Source_Name}{1FHL JHHMM.m+DDMM, constructed according to IAU Specifications for Nomenclature; 
 #' m is decimal minutes of R.A.; in the name R.A. and decl. are truncated at 0.1 decimal minutes and 1' , respectively}
@@ -384,6 +397,7 @@ NULL
 #' Last Updated: 2014-11-06
 #'
 #' @format A data frame with 7 variables on 161 gamma-ray pulsars: 
+#' @section Fields: 
 #' \describe{
 #' \item{PSR}{Pulsar name, PSR JHHMM+DDMM, constructed using the RA and Dec}
 #' \item{RAJ_deg}{Right Ascension, J2000, degrees}

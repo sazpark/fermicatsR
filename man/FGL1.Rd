@@ -4,7 +4,23 @@
 \name{FGL1}
 \alias{FGL1}
 \title{1FGL Catalog (Fermi Large Area Telescope First Source Catalog)}
-\format{A data frame with 89 variables on 1451 gamma-ray sources:
+\format{A data frame with 89 variables on 1451 gamma-ray sources:}
+\source{
+\url{http://fermi.gsfc.nasa.gov/ssc/data/access/lat/1yr_catalog/}
+}
+\usage{
+FGL1
+}
+\description{
+Fermi Large Area Telescope First Source Catalog (1FGL).
+Abdo, A. A. et al., The Astrophysical Journal Supplement Series, 188, 405 (2010).
+}
+\details{
+Initial Release: 14 Jan 2010
+Latest Release: gll_psc_v03.fit (9 February 2010)
+}
+\section{Fields}{
+
 \describe{
 \item{Source_Name}{1FGL JHHMM.m+DDMM[c], constructed according to IAU Specifications for Nomenclature;
 m is decimal minutes of R.A.; in the name R.A. and decl. are truncated at 0.1 decimal minutes and 1' ,
@@ -72,20 +88,7 @@ Star forming region (SFR), LBV star (LVB), Unassociated source (...)}
 \item{ASSOC1}{Name of identified or likely associated source.}
 \item{ASSOC2}{Alternate name of identified or likely associated source.}
 \item{Flags}{Binary coding. See Table 4 of 1FGL paper for the definition of the various Analysis Flags.}
-}}
-\source{
-\url{http://fermi.gsfc.nasa.gov/ssc/data/access/lat/1yr_catalog/}
 }
-\usage{
-FGL1
-}
-\description{
-Fermi Large Area Telescope First Source Catalog (1FGL).
-Abdo, A. A. et al., The Astrophysical Journal Supplement Series, 188, 405 (2010).
-}
-\details{
-Initial Release: 14 Jan 2010
-Latest Release: gll_psc_v03.fit (9 February 2010)
 }
 \keyword{datasets}
 

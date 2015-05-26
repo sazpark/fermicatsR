@@ -4,9 +4,24 @@
 \name{FGL0}
 \alias{FGL0}
 \title{0FGL Catalog (Fermi Large Area Telescope Bright Gamma-ray Source List)}
-\format{A data frame with 21 variables on 205 gamma-ray sources:
+\format{A data frame with 21 variables on 205 gamma-ray sources:}
+\source{
+\url{http://heasarc.gsfc.nasa.gov/W3Browse/fermi/fermilbsl.html}
+}
+\usage{
+FGL0
+}
+\description{
+Fermi Large Area Telescope Bright Gamma-ray Source List (0FGL).
+Abdo, A. A. et al., The Astrophysical Journal Supplement Series, 183, 46 (2009).
+}
+\details{
+FITS Filename: gll_psc3month_BSL_v2.fit
+}
+\section{Fields}{
+
 \describe{
-\item{Source_Name}{0FGL JHHMM.m+DDMM, constructed according to IAU Specifications for Nomenclature;
+\item{\code{Source_Name}}{0FGL JHHMM.m+DDMM, constructed according to IAU Specifications for Nomenclature;
 m is decimal minutes of R.A.; in the name R.A. and decl. are truncated at 0.1 decimal minutes and 1' , respectively}
 \item{RA}{Right Ascension, J2000, deg, 3 decimal places}
 \item{DEC}{Declination, J2000, deg, 3 decimal places}
@@ -28,19 +43,7 @@ m is decimal minutes of R.A.; in the name R.A. and decl. are truncated at 0.1 de
 \item{CLASS2}{2nd class designation for associated source}
 \item{ASSOC1}{Name of identified or likely associated source}
 \item{ASSOC2}{Alternate name of identified or likely associated source}
-}}
-\source{
-\url{http://heasarc.gsfc.nasa.gov/W3Browse/fermi/fermilbsl.html}
 }
-\usage{
-FGL0
-}
-\description{
-Fermi Large Area Telescope Bright Gamma-ray Source List (0FGL).
-Abdo, A. A. et al., The Astrophysical Journal Supplement Series, 183, 46 (2009).
-}
-\details{
-FITS Filename: gll_psc3month_BSL_v2.fit
 }
 \keyword{datasets}
 
