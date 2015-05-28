@@ -30,10 +30,17 @@ For more details on any of these data sets, type 'help(dataset)' or go to the Fe
 You can also contact me directly with your questions.
 }
 \examples{
+# Variability index vs Curvature significance of 2FGL sources, color-coded by source class
 data(FGL2)
 if (require("ggplot2")) {
 qplot(log(Signif_Curve), log(Variability_Index), data = FGL2, color = CLASS1)
 }
+# Distribution of spindown luminosities of LAT-detected gamma-ray pulsars
+data(pulsars)
+hist(log10(pulsars$Edot),
+xlab = "Log(Spindown Luminosity) (erg/s)",
+ylab = "Number of pulsars",
+main = "LAT-Detected Gamma-ray Pulsars")
 }
 \author{
 Pablo Saz Parkinson (\email{sazpark2@gmail.com})

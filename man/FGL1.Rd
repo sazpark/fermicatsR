@@ -79,11 +79,10 @@ respectively; 'c' indicates that based on the region of the sky the source is co
 \item{ASSOC_GAM3}{Identification or positional associations with EGR source}
 \item{TEVCAT_FLAG}{Positional association with a TeVCat source, P for angular size < 40', E for extended, N if no TeV association}
 \item{CLASS1}{Class designation for most likely association. Capital letters indicate firm identifications;
-lower-case letters indicate associations: Blazar of the BL Lac type (BZB), Blazar of the FSRQ type (BZQ),
-Active galaxy of uncertain type (AGU), Pulsar, identified by pulsations above 10 GeV (HPSR),
-Pulsar, identified by pulsations in LAT, excluding HPSR (PSR), Supernova remnant (SNR),
-Pulsar wind nebula (PWN), Radio galaxy (RDG), High-mass binary (HMB), Normal galaxy (GAL),
-Star forming region (SFR), LBV star (LVB), Unassociated source (...)}
+lower-case letters indicate associations: Pulsar (PSR), Pulsar wind nebula (PWN), Supernova remnant (SNR), Globular cluster (GLC),
+Micro-quasar object (MQO), High-mass binary (HXB), Blazar of the BL Lac type (BZB), Blazar of the FSRQ type (BZQ),
+Non-blazar active galaxy (AGN), Active galaxy of uncertain type (AGU), Normal galaxy (GAL), Starburst galaxy (SBG),
+Unassociated source (  ).}
 \item{CLASS2}{2nd class designation for associated source.}
 \item{ASSOC1}{Name of identified or likely associated source.}
 \item{ASSOC2}{Alternate name of identified or likely associated source.}

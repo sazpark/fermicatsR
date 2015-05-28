@@ -25,10 +25,17 @@
 #' @name fermicatsR
 #' @author Pablo Saz Parkinson (\email{sazpark2@@gmail.com})
 #' @examples
+#' # Variability index vs Curvature significance of 2FGL sources, color-coded by source class
 #' data(FGL2)
 #' if (require("ggplot2")) {
 #' qplot(log(Signif_Curve), log(Variability_Index), data = FGL2, color = CLASS1)
 #' }
+#' # Distribution of spindown luminosities of LAT-detected gamma-ray pulsars
+#' data(pulsars)
+#' hist(log10(pulsars$Edot), 
+#' xlab = "Log(Spindown Luminosity) (erg/s)", 
+#' ylab = "Number of pulsars", 
+#' main = "LAT-Detected Gamma-ray Pulsars")
 NULL
 
 #' 0FGL Catalog (Fermi Large Area Telescope Bright Gamma-ray Source List)
@@ -59,7 +66,10 @@ NULL
 #' \item{ASSOC_GAM1}{Identification or positional associations with 3EG, EGR, or AGILE sources} 
 #' \item{ASSOC_GAM2}{Identification or positional associations with 3EG, EGR, or AGILE sources}
 #' \item{ASSOC_GAM3}{Identification or positional associations with 3EG, EGR, or AGILE sources}
-#' \item{CLASS1}{Class designation for associated source. Capital letters indicate firm identifications; lower-case letters indicate associations.}
+#' \item{CLASS1}{Class designation for associated source. Capital letters indicate firm identifications; 
+#' lower-case letters indicate associations: Pulsar (PSR), Pulsar wind nebula (pwn), High-mass X-ray binary (hxb),
+#' BL Lac type of blazar (bzb), FSRQ type of blazar (bzq), Uncertain type of blazar (bzu), Radio galaxy (rdg),
+#' Globular cluster (glb), Special case - potential association with SNR or PWN (x), Unassociated (  ).}
 #' \item{CLASS2}{2nd class designation for associated source}
 #' \item{ASSOC1}{Name of identified or likely associated source}
 #' \item{ASSOC2}{Alternate name of identified or likely associated source}
@@ -135,11 +145,10 @@ NULL
 #' \item{ASSOC_GAM3}{Identification or positional associations with EGR source}
 #' \item{TEVCAT_FLAG}{Positional association with a TeVCat source, P for angular size < 40', E for extended, N if no TeV association}
 #' \item{CLASS1}{Class designation for most likely association. Capital letters indicate firm identifications; 
-#' lower-case letters indicate associations: Blazar of the BL Lac type (BZB), Blazar of the FSRQ type (BZQ), 
-#' Active galaxy of uncertain type (AGU), Pulsar, identified by pulsations above 10 GeV (HPSR), 
-#' Pulsar, identified by pulsations in LAT, excluding HPSR (PSR), Supernova remnant (SNR), 
-#' Pulsar wind nebula (PWN), Radio galaxy (RDG), High-mass binary (HMB), Normal galaxy (GAL), 
-#' Star forming region (SFR), LBV star (LVB), Unassociated source (...)} 
+#' lower-case letters indicate associations: Pulsar (PSR), Pulsar wind nebula (PWN), Supernova remnant (SNR), Globular cluster (GLC), 
+#' Micro-quasar object (MQO), High-mass binary (HXB), Blazar of the BL Lac type (BZB), Blazar of the FSRQ type (BZQ), 
+#' Non-blazar active galaxy (AGN), Active galaxy of uncertain type (AGU), Normal galaxy (GAL), Starburst galaxy (SBG), 
+#' Unassociated source (  ).}
 #' \item{CLASS2}{2nd class designation for associated source.}
 #' \item{ASSOC1}{Name of identified or likely associated source.}
 #' \item{ASSOC2}{Alternate name of identified or likely associated source.}
@@ -225,7 +234,10 @@ NULL
 #' \item{ASSOC_GAM3}{Identification or positional associations with EGR source}
 #' \item{TEVCAT_FLAG}{Positional association with a TeVCat source, P for angular size < 40', E for extended, N if no TeV association}
 #' \item{ASSOC_TEV}{Name of likely corresponding TeV source from TevCat.}
-#' \item{CLASS1}{Class designation for most likely association. Capital letters indicate firm identifications; lower-case letters indicate associations: Blazar of the BL Lac type (BZB), Blazar of the FSRQ type (BZQ), Active galaxy of uncertain type (AGU), Pulsar, identified by pulsations above 10 GeV (HPSR), Pulsar, identified by pulsations in LAT, excluding HPSR (PSR), Supernova remnant (SNR), Pulsar wind nebula (PWN), Radio galaxy (RDG), High-mass binary (HMB), Normal galaxy (GAL), Star forming region (SFR), LBV star (LVB), Unassociated source (...)} 
+#' \item{CLASS1}{Class designation for most likely association. Capital letters indicate firm identifications; lower-case letters indicate associations: 
+#' Pulsar, identified by pulsations (PSR), Pulsar, no pulsations seen in LAT yet (psr), Pulsar wind nebula (PWN), Supernova remnant (SNR), Supernova remnant/pulsar wind nebula (spp), 
+#' Globular cluster (glc), High-mass binary (HMB), Nova (NOV), Blazar of the BL Lac type (BZB), Blazar of the FSRQ type (BZQ), Non-blazar active galaxy (AGN), Radio galaxy (RDG), 
+#' Seyfert galaxy (SEY), Active galaxy of uncertain type (AGU), Normal galaxy (GAL), Starburst galaxy (sbg), Unassociated source (  ).} 
 #' \item{CLASS2}{2nd class designation for associated source.}
 #' \item{ASSOC1}{Name of identified or likely associated source.}
 #' \item{ASSOC2}{Alternate name of identified or likely associated source.}
@@ -321,7 +333,11 @@ NULL
 #' \item{ASSOC_GAM3}{Identification or positional associations with EGR source}
 #' \item{TEVCAT_FLAG}{Positional association with a TeVCat source, P for angular size < 40', E for extended, N if no TeV association}
 #' \item{ASSOC_TEV}{Name of likely corresponding TeV source from TevCat.}
-#' \item{CLASS1}{Class designation for most likely association. Capital letters indicate firm identifications; lower-case letters indicate associations: Blazar of the BL Lac type (BZB), Blazar of the FSRQ type (BZQ), Active galaxy of uncertain type (AGU), Pulsar, identified by pulsations above 10 GeV (HPSR), Pulsar, identified by pulsations in LAT, excluding HPSR (PSR), Supernova remnant (SNR), Pulsar wind nebula (PWN), Radio galaxy (RDG), High-mass binary (HMB), Normal galaxy (GAL), Star forming region (SFR), LBV star (LVB), Unassociated source (...)} 
+#' \item{CLASS1}{Class designation for most likely association. Capital letters indicate firm identifications; lower-case letters indicate associations: 
+#' Pulsar, identified by pulsations (PSR), Pulsar, no pulsations seen in LAT yet (psr), Pulsar wind nebula (PWN), Supernova remnant (SNR), Supernova remnant/pulsar wind nebula (spp), 
+#' Globular cluster (glc), High-mass binary (HMB), Binary (BIN), Nova (NOV), Star-forming region (SFR), Compact Steep Spectrum Quasar (css), Blazar of the BL Lac type (BLL), Blazar of the FSRQ type (FSRQ), Non-blazar active galaxy (AGN), 
+#' Radio galaxy (RDG), Seyfert galaxy (SEY), Blazar candidate of uncertain type (BCU), Normal galaxy (GAL), Starburst galaxy (sbg), 
+#' Narrow line Seyfert 1 (NLSY1), Soft spectrum radio quasar (ssrq), Unassociated source (  ).} 
 #' \item{CLASS2}{2nd class designation for associated source.}
 #' \item{ASSOC1}{Name of identified or likely associated source.}
 #' \item{ASSOC2}{Alternate name of identified or likely associated source.}
@@ -379,9 +395,9 @@ NULL
 #' \item{CLASS1}{Class designation for most likely association. Capital letters indicate firm identifications; 
 #' lower-case letters indicate associations: Blazar of the BL Lac type (BZB), Blazar of the FSRQ type (BZQ), 
 #' Active galaxy of uncertain type (AGU), Pulsar, identified by pulsations above 10 GeV (HPSR), 
-#' Pulsar, identified by pulsations in LAT, excluding HPSR (PSR), Supernova remnant (SNR), 
-#' Pulsar wind nebula (PWN), Radio galaxy (RDG), High-mass binary (HMB), Normal galaxy (GAL), 
-#' Star forming region (SFR), LBV star (LVB), Unassociated source (...)} 
+#' Pulsar, identified by pulsations in LAT, excluding HPSR (PSR), Pulsar, no pulsations seen in LAT yet (psr), 
+#' Supernova remnant (SNR), Pulsar wind nebula (PWN), Unclear whether SNR or PWN (spp), Radio galaxy (RDG), 
+#' High-mass binary (HMB), Normal galaxy (GAL), Star forming region (SFR), LBV star (lbv), Unassociated source (  ).} 
 #' \item{CLASS2}{Class designation for alternate association, if any} 
 #' \item{ASSOC1}{Name of identified or most likely associated source} 
 #' \item{ASSOC2}{Name of alternate association, if any}

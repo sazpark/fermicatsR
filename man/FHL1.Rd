@@ -59,9 +59,9 @@ N if no TeV association}
 \item{CLASS1}{Class designation for most likely association. Capital letters indicate firm identifications;
 lower-case letters indicate associations: Blazar of the BL Lac type (BZB), Blazar of the FSRQ type (BZQ),
 Active galaxy of uncertain type (AGU), Pulsar, identified by pulsations above 10 GeV (HPSR),
-Pulsar, identified by pulsations in LAT, excluding HPSR (PSR), Supernova remnant (SNR),
-Pulsar wind nebula (PWN), Radio galaxy (RDG), High-mass binary (HMB), Normal galaxy (GAL),
-Star forming region (SFR), LBV star (LVB), Unassociated source (...)}
+Pulsar, identified by pulsations in LAT, excluding HPSR (PSR), Pulsar, no pulsations seen in LAT yet (psr),
+Supernova remnant (SNR), Pulsar wind nebula (PWN), Unclear whether SNR or PWN (spp), Radio galaxy (RDG),
+High-mass binary (HMB), Normal galaxy (GAL), Star forming region (SFR), LBV star (lbv), Unassociated source (  ).}
 \item{CLASS2}{Class designation for alternate association, if any}
 \item{ASSOC1}{Name of identified or most likely associated source}
 \item{ASSOC2}{Name of alternate association, if any}

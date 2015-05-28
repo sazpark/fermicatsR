@@ -39,7 +39,10 @@ m is decimal minutes of R.A.; in the name R.A. and decl. are truncated at 0.1 de
 \item{ASSOC_GAM1}{Identification or positional associations with 3EG, EGR, or AGILE sources}
 \item{ASSOC_GAM2}{Identification or positional associations with 3EG, EGR, or AGILE sources}
 \item{ASSOC_GAM3}{Identification or positional associations with 3EG, EGR, or AGILE sources}
-\item{CLASS1}{Class designation for associated source. Capital letters indicate firm identifications; lower-case letters indicate associations.}
+\item{CLASS1}{Class designation for associated source. Capital letters indicate firm identifications;
+lower-case letters indicate associations: Pulsar (PSR), Pulsar wind nebula (pwn), High-mass X-ray binary (hxb),
+BL Lac type of blazar (bzb), FSRQ type of blazar (bzq), Uncertain type of blazar (bzu), Radio galaxy (rdg),
+Globular cluster (glb), Special case - potential association with SNR or PWN (x), Unassociated (  ).}
 \item{CLASS2}{2nd class designation for associated source}
 \item{ASSOC1}{Name of identified or likely associated source}
 \item{ASSOC2}{Alternate name of identified or likely associated source}

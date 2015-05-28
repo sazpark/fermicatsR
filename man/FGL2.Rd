@@ -88,7 +88,10 @@ Galactic diffuse emission; e indicates a source that was modeled as spatially ex
 \item{ASSOC_GAM3}{Identification or positional associations with EGR source}
 \item{TEVCAT_FLAG}{Positional association with a TeVCat source, P for angular size < 40', E for extended, N if no TeV association}
 \item{ASSOC_TEV}{Name of likely corresponding TeV source from TevCat.}
-\item{CLASS1}{Class designation for most likely association. Capital letters indicate firm identifications; lower-case letters indicate associations: Blazar of the BL Lac type (BZB), Blazar of the FSRQ type (BZQ), Active galaxy of uncertain type (AGU), Pulsar, identified by pulsations above 10 GeV (HPSR), Pulsar, identified by pulsations in LAT, excluding HPSR (PSR), Supernova remnant (SNR), Pulsar wind nebula (PWN), Radio galaxy (RDG), High-mass binary (HMB), Normal galaxy (GAL), Star forming region (SFR), LBV star (LVB), Unassociated source (...)}
+\item{CLASS1}{Class designation for most likely association. Capital letters indicate firm identifications; lower-case letters indicate associations:
+Pulsar, identified by pulsations (PSR), Pulsar, no pulsations seen in LAT yet (psr), Pulsar wind nebula (PWN), Supernova remnant (SNR), Supernova remnant/pulsar wind nebula (spp),
+Globular cluster (glc), High-mass binary (HMB), Nova (NOV), Blazar of the BL Lac type (BZB), Blazar of the FSRQ type (BZQ), Non-blazar active galaxy (AGN), Radio galaxy (RDG),
+Seyfert galaxy (SEY), Active galaxy of uncertain type (AGU), Normal galaxy (GAL), Starburst galaxy (sbg), Unassociated source (  ).}
 \item{CLASS2}{2nd class designation for associated source.}
 \item{ASSOC1}{Name of identified or likely associated source.}
 \item{ASSOC2}{Alternate name of identified or likely associated source.}
