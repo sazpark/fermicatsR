@@ -11,4 +11,6 @@ if (!file.exists("data-raw/gll_psc_v16.fit")) {
 # Read the 3FGL FITS file into a data frame
 # File Rev 3, Released 18 May 2015
 FGL3 <- tbl_df(readFrameFromFITS("data-raw/gll_psc_v16.fit", hdu = 1))
+FGL3$Source_Name = gsub(" ", "", FGL3$Source_Name)
+FGL3$CLASS1 = gsub(" ", "", FGL3$CLASS1)
 save(FGL3, file = "data/FGL3.rdata", compress = "xz")

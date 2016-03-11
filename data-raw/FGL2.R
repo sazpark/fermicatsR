@@ -11,4 +11,7 @@ if (!file.exists("data-raw/gll_psc_v09.fit")) {
 # Read the 2FGL FITS file into a data frame
 # File Rev 6, Released 18 May 2015
 FGL2 <- tbl_df(readFrameFromFITS("data-raw/gll_psc_v09.fit", hdu = 1))
+FGL2$Source_Name = gsub(" ", "", FGL2$Source_Name)
+FGL2$CLASS1 = gsub(" ", "", FGL2$CLASS1)
+FGL2$CLASS2 = gsub(" ", "", FGL2$CLASS2)
 save(FGL2, file = "data/FGL2.rdata", compress = "xz")
