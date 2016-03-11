@@ -1,11 +1,12 @@
-#' fermicatsR (v 1.3): A package containing catalogs from the Fermi Large Area Telescope.
+#' fermicatsR (v 1.4): A package containing catalogs from the Fermi Large Area Telescope.
 #'
 #' Since its launch from the Kennedy Space Center on the 11th of June 2008, the Large Area Telescope (LAT, \url{https://www-glast.stanford.edu}), on board the Fermi Gamma-ray 
 #' Space Telescope (formerly GLAST) has been performing an all-sky survey of the gamma-ray sky at energies between 20 MeV and 
 #' 300 GeV. The LAT Collaboration, consisting of more than 400 scientists at over 90 universities and laboratories in 12 countries, 
 #' has produced a number of catalogs and lists of gamma-ray sources, at various phases of the mission. 
 #' The fermicatsR package provides some of these catalogs in the form of the following data sets:
-#' FGL0, FGL1, FGL2, FGL3, FHL1, and pulsars.
+#' FGL0, FGL1, FGL2, FGL3, LAC3_LO, LAC3_HI, FHL1, FHL2, FIG1, and pulsars. For an application of the fermicatsR package, see Saz Parkinson et al., 
+#' "Classification and Ranking of Fermi LAT Gamma-ray Sources from the 3FGL Catalog using Machine Learning Techniques", The Astrophysical Journal, \strong{820}, 8 (2016).
 #' 
 #' @section fermicatsR :
 #' The following is a brief description of the data sets available within the fermicatsR package and their corresponding Fermi LAT catalogs/lists.
@@ -14,9 +15,14 @@
 #' \item FGL0: Fermi LAT Bright Gamma-ray Source List, 205 gamma-ray sources, using 3 months of data [Abdo et al., ApJS, \strong{183}, 46 (2009)]
 #' \item FGL1: Fermi LAT First Source Catalog, 1451 gamma-ray sources, using 11 months of data [Abdo et al., ApJS, \strong{188}, 405 (2010)]
 #' \item FGL2: Fermi LAT Second Source Catalog, 1873 gamma-ray sources, using 24 months of data [Nolan et al., ApJS, \strong{199}, 31 (2012)]
+#' \item FGL3: Fermi LAT Third Source Catalog, 3034 gamma-ray sources, using 48 months of data [Acero et al., ApJS, \strong{218}, 23 (2015)]
+#' \item LAC3_LO: Fermi LAT Third Catalog of Active Galactic Nuclei - Low Galactic Latitude (|GLAT| < 10 deg.), 182 sources, using 48 months of data [Ackermann et al., ApJ, \strong{810}, 14 (2015)]
+#' \item LAC3_HI: Fermi LAT Third Catalog of Active Galactic Nuclei - High Galactic Latitude (|GLAT| > 10 deg.), 1591 sources, using 48 months of data [Ackermann et al., ApJ, \strong{810}, 14 (2015)]
 #' \item FHL1: First Fermi-LAT Catalog of Sources Above 10 GeV, 514 high-energy gamma-ray sources, using 36 months of data [Ackermann et al., ApJS, \strong{209}, 34 (2013)]
-#' \item FGL3: Fermi LAT Third Source Catalog, 3034 gamma-ray sources, using 48 months of data [Acero et al., ApJS, \emph{accepted} (2015)]
-#' \item pulsars: Fermi LAT List of Detected Pulsars [\url{https://confluence.slac.stanford.edu/x/5Jl6Bg}], 161 gamma-ray pulsars, last updated 2014-11-06
+#' \item FHL2: The Second Catalog of Hard Fermi-LAT Sources,  360 gamma-ray sources, using 80 months of data [Ackermann et al., ApJS, \strong{222}, 5 (2016)]
+#' \item FIG1: The First Fermi-LAT Inner Galaxy point source catalog, 48 gamma-ray sources, using 62 months of data [Ajello et al., ApJ, \strong{819}, 44 (2016)]
+#' \item DF1: The First D3PO Fermi catalog of gamma-ray source candidates, 3106 sources, using 6.5 years of data [Selig et al., A\&A, \strong{581}, 126 (2015)]
+#' \item pulsars: Fermi LAT List of Detected Pulsars [\url{https://confluence.slac.stanford.edu/x/5Jl6Bg}], 205 gamma-ray pulsars, last updated 2016-02-22
 #'}
 #'
 #' For more details on any of these data sets, type 'help(dataset)' or go to the Fermi Science Support Center (FSSC) web page (\url{http://fermi.gsfc.nasa.gov/ssc/data/access/}). 
@@ -45,7 +51,7 @@ NULL
 #'
 #'FITS Filename: gll_psc3month_BSL_v2.fit
 #'
-#' @format A data frame with 21 variables on 205 gamma-ray sources:
+#' @format A data frame with 21 variables on 205 gamma-ray sources.
 #' @section Fields: 
 #' \describe{
 #' \item{\code{Source_Name}}{0FGL JHHMM.m+DDMM, constructed according to IAU Specifications for Nomenclature; 
@@ -85,7 +91,7 @@ NULL
 #' Initial Release: 14 Jan 2010
 #' Latest Release: gll_psc_v03.fit (9 February 2010)
 #'
-#' @format A data frame with 89 variables on 1451 gamma-ray sources: 
+#' @format A data frame with 89 variables on 1451 gamma-ray sources.
 #' @section Fields: 
 #' \describe{
 #' \item{Source_Name}{1FGL JHHMM.m+DDMM[c], constructed according to IAU Specifications for Nomenclature; 
@@ -165,7 +171,7 @@ NULL
 #' Initial Release: 11 July 2011
 #' Latest Release: gll_psc_v09.fit (18 May 2015)
 #'
-#' @format A data frame with 137 variables on 1873 gamma-ray sources: 
+#' @format A data frame with 137 variables on 1873 gamma-ray sources. 
 #' @section Fields: 
 #' \describe{
 #' \item{Source_Name}{2FGL JHHMM.m+DDMM[c/e], constructed according to IAU Specifications for Nomenclature; 
@@ -249,12 +255,12 @@ NULL
 #' 3FGL Catalog (Fermi Large Area Telescope Third Source Catalog)
 #'
 #' Fermi Large Area Telescope Second Source Catalog (3FGL).
-#' Acero, F. et al., The Astrophysical Journal Supplement Series, Accepted.
+#' Acero, F. et al., The Astrophysical Journal Supplement Series, 218, 23 (2015).
 #'
 #'  Initial Release: 9 January 2015
 #'  Latest Release: gll_psc_v16.fit (18 May 2015)
 #'
-#' @format A data frame with 224 variables on 3034 gamma-ray sources: 
+#' @format A data frame with 224 variables on 3034 gamma-ray sources. 
 #' @section Fields: 
 #' \describe{
 #' \item{Source_Name}{3FGL JHHMM.m+DDMM[c/e], constructed according to IAU Specifications for Nomenclature; 
@@ -324,10 +330,10 @@ NULL
 #' \item{Unc_Flux_History.1 ... Unc_Flux_History.48}{Error on the integral flux from 100 MeV to 100 GeV in time interval 1 ... 48, in cm^{-2} s^{-1}, using the method indicated in Unc_Flag_History column and added in quatrature with 3\% systematic component.}
 #' \item{Unc_Flag_History.1 ... Unc_Flag_History.48}{1 if it is half of the difference between the 2 sigma upper limit and the maximum likelihood value given in Flux_History; 0 if it is the 1 sigma uncertainty derived from a significant detection in the interval.}
 #' \item{Extended_Source_Name}{Cross-reference to the ExtendedSources extension for extended sources, if any.}
-#' \item{0FGL_Name}{Name of the corresponding 0FGL source, if any.}
-#' \item{1FGL Name}{Name of the corresponding 1FGL source, if any.}
-#' \item{2FGL Name}{Name of the corresponding 2FGL source, if any.}
-#' \item{1FHL Name}{Name of the corresponding 1FHL source, if any.}
+#' \item{X0FGL_Name}{Name of the corresponding 0FGL source, if any.}
+#' \item{X1FGL Name}{Name of the corresponding 1FGL source, if any.}
+#' \item{X2FGL Name}{Name of the corresponding 2FGL source, if any.}
+#' \item{X1FHL Name}{Name of the corresponding 1FHL source, if any.}
 #' \item{ASSOC_GAM1}{Identification or positional associations with AGILE (1AGL)source}
 #' \item{ASSOC_GAM2}{Identification or positional associations with 3EG source}
 #' \item{ASSOC_GAM3}{Identification or positional associations with EGR source}
@@ -352,7 +358,7 @@ NULL
 #' Ackermann, M. et al., The Astrophysical Journal Supplement Series, 209, 34 (2013).
 #' FITS Filename: gll_psch_v07.fit, released 29 July 2013.
 #'
-#' @format A data frame with 39 variables on 514 sources: 
+#' @format A data frame with 39 variables on 514 sources.
 #' @section Fields: 
 #' \describe{
 #' \item{Source_Name}{1FHL JHHMM.m+DDMM, constructed according to IAU Specifications for Nomenclature; 
@@ -405,14 +411,260 @@ NULL
 #' @source \url{http://fermi.gsfc.nasa.gov/ssc/data/access/lat/1FHL/}
 "FHL1"
 
+#' 2FHL Catalog (Second Catalog of Hard Fermi-LAT Sources)
+#'
+#' The Second Catalog of Hard Fermi-LAT Sources (2FHL).
+#' Ackermann, M. et al., The Astrophysical Journal Supplement Series, 222, 5 (2016).
+#' FITS Filename: gll_psch_v08.fit, released 16 Sept 2015.
+#'
+#' @format A data frame with 42 variables on 360 sources. 
+#' @section Fields: 
+#' \describe{
+#' \item{Source_Name}{2FHL JHHMM.m+DDMM, constructed according to IAU Specifications for Nomenclature; 
+#' m is decimal minutes of R.A.; in the name R.A. and decl. are truncated at 0.1 decimal minutes and 1' , respectively. A Source_Name ending with "e" indicates an extended source.}
+#' \item{RAJ2000}{Right Ascension, J2000}
+#' \item{DEJ2000}{Declination, J2000} 
+#' \item{GLON}{Galactic longitude, deg.} 
+#' \item{GLAT}{Galactic latitude, deg.} 
+#' \item{Pos_err_68}{Position uncertainty at 68\% confidence level}
+#' \item{TS}{Test Statistic}
+#' \item{Spectral_Index}{Best fit photon number power-law index} 
+#' \item{Unc_Spectral_Index}{1 sigma error on Spectral_Index} 
+#' \item{Intr_Spectral_Index_D11}{Intrinsic spectral index computed using the Dominguez et al. (2011b) EBL model}
+#' \item{Unc_Intr_Spectral_Index_D11}{1 sigma uncertainty on the intrinsic spectral index computed using the Dominguez et al. (2011b) EBL model}
+#' \item{Intr_Spectral_Index_G12}{Intrinsic spectral index computed using the Gilmore et al. (2012) EBL model}
+#' \item{Unc_Intr_Spectral_Index_G12}{1 sigma uncertainty on the intrinsic spectral index computed using the Gilmore et al. (2012) EBL model}
+#' \item{Flux50}{Integral photon flux from 50 GeV to 2 TeV, photon cm^{-2} s^{-1}}
+#' \item{Unc_Flux50}{1 sigma uncertainty on integral flux from 50 GeV to 2 TeV, photon cm^{-2} s^{-1}}
+#' \item{Energy_Flux50}{Energy flux from 50 GeV to 2 TeV, erg cm^{-2} s^{-1}} 
+#' \item{Unc_Energy_Flux50}{1 sigma error on energy flux from 50 GeV to 2 TeV, erg cm^{-2} s^{-1}} 
+#' \item{Flux50_171GeV}{Integral photon flux from 50 to 171 GeV, cm^{-2} s^{-1}}
+#' \item{Unc_Flux50_171GeV.1}{(lower) 1 sigma error on integral photon flux from 50 to 171 GeV, cm^{-2} s^{-1}, set to NaN if 1 sigma interval contains 0} 
+#' \item{Unc_Flux50_171GeV.2}{(upper) 1 sigma error on integral photon flux from 50 to 171 GeV, cm^{-2} s^{-1}} 
+#' \item{Sqrt_TS50_171GeV}{Square root of Test Statistic between 50 and 171 GeV}
+#' \item{Flux171_585GeV}{Integral photon flux from 171 to 585 GeV, cm^{-2} s^{-1}}
+#' \item{Unc_Flux171_585GeV.1}{(lower) 1 sigma error on integral photon flux from 171 to 585 GeV, cm^{-2} s^{-1}, set to NaN if 1 sigma interval contains 0} 
+#' \item{Unc_Flux171_585GeV.2}{(upper) 1 sigma error on integral photon flux from 171 to 585 GeV, cm^{-2} s^{-1}} 
+#' \item{Sqrt_TS171_585GeV}{Square root of Test Statistic between 171 and 585 GeV}
+#' \item{Flux585_2000GeV}{Integral photon flux from 585 GeV to 2 TeV, cm^{-2} s^{-1}}
+#' \item{Unc_Flux585_2000GeV.1}{(lower) 1 sigma error on integral photon flux from 585 GeV to 2 TeV, cm^{-2} s^{-1}, set to NaN if 1 sigma interval contains 0} 
+#' \item{Unc_Flux585_2000GeV.2}{(upper) 1 sigma error on integral photon flux from 585 GeV to 2 TeV, cm^{-2} s^{-1}} 
+#' \item{Sqrt_TS585_2000GeV}{Square root of Test Statistic between 585 GeV and 2 TeV}
+#' \item{Npred}{Predicted number of photons from the source}
+#' \item{HEP_Energy}{Highest photon energy, GeV}
+#' \item{HEP_Prob}{Probability that the HEP is coming from the source, >=0.85}
+#' \item{ROI}{Region of interest number}
+#' \item{ASSOC}{Name of the most likely associated source} 
+#' \item{ASSOC_PROB_BAY}{Probability of association from the Bayesian method}
+#' \item{ASSOC_PROB_LR}{Probability of association from the likelihood ratio method}
+#' \item{CLASS}{Class designation for most likely association. Capital letters indicate firm identifications; 
+#' lower-case letters indicate associations: Pulsar (psr), Pulsar wind nebula (pwn), Supernova remnant (snr), 
+#' Supernova remnant/Pulsar wind nebula (spp), High-mass binary (hmb), Binary (bin), Star-forming region (sfr), 
+#' BL Lac type of blazar (bll), BL Lac type of blazar with prominent galaxy emission (bll-g), FSRQ type of blazar (fsrq), 
+#' Non-blazar active galaxy (agn), Radio galaxy (rdg), Radio galaxy/BL Lac (rdg/bll), Blazar candidate of uncertain type I (bcu I), 
+#' Blazar candidate of uncertain type II (bcu II), Blazar candidate of uncertain type III (bcu III), Normal galaxy, or part (gal), 
+#' Galaxy cluster (galclu), Unassociated source (  ).} 
+#' \item{Redshift}{Redshift (when available) of the most likely associated source}
+#' \item{NuPeak_obs}{Observed Synchrotron peak frequency, Hz}
+#' \item{X3FGL_Name}{Name of the most likely associated source in 3FGL}
+#' \item{X1FHL_Name}{Name of the most likely associated source in the 1FHL}
+#' \item{TeVCat_Name}{Name of the most likely associated source in the TeVCat}
+#' }
+#' @source \url{http://fermi.gsfc.nasa.gov/ssc/data/access/lat/2FHL/}
+"FHL2"
+
+#' 3LAC_LO (Third Catalog of Active Galactic Nuclei Detected by the Fermi Large Area Telescope - Low Galactic Latitude)
+#'
+#' Third Catalog of Active Galactic Nuclei (3LAC).
+#' Ackermann, M. et al., The Astrophysical Journal, 810, 14 (2015).
+#'
+#' Low Galactic Latitude (|GLAT| < 10 deg.) Sources.
+#'
+#' @format A data frame with 20 variables on 182 gamma-ray sources.
+#' @section Fields: 
+#' \describe{
+#' \item{GLON}{Galactic Longitude, degrees}
+#' \item{GLAT}{Galactic Latitude, degrees}
+#' \item{ASSOC_3FGL}{3FGL Source Name (JHHMM.m+DDMM)}
+#' \item{VHE}{Display this very-high-energy AGN data (table10)}
+#' \item{CName}{Name of the counterpart source}
+#' \item{RAJ2000}{Radio counterpart right Ascension (J2000)}
+#' \item{DEJ2000}{Radio counterpart declination (J2000)}
+#' \item{Sep}{Angular separation with counterpart source, deg.}
+#' \item{PosErr}{95\% error radius, deg.}
+#' \item{SpCl}{Optical class (G1)}
+#' \item{SEDCl}{SED class}
+#' \item{lognu}{Log frequency of observer-frame position of synchrotron peak (NupSyn-Meas)}
+#' \item{lognuRf}{Log frequency of rest-frame position of synchrotron peak (NupSyn-Rf)}
+#' \item{z}{Redshift}
+#' \item{Prob}{Bayesian probability}
+#' \item{LR.RG}{Likelihood Ratio reliability for Radio-gamma-ray association}
+#' \item{FRad}{Radio flux}
+#' \item{n_FRad}{Flag on FRad}
+#' \item{FX}{X-ray flux; units of 1e-13erg/cm2/s}
+#' \item{LR.XG}{Likelihood Ratio reliability for X-ray-gamma-ray association}
+#' }
+#' @source \url{http://adsabs.harvard.edu/abs/2015ApJ...810...14A}
+"LAC3_LO"
+
+#' 3LAC_HI (Third Catalog of Active Galactic Nuclei Detected by the Fermi Large Area Telescope - High Galactic Latitude)
+#'
+#' Third Catalog of Active Galactic Nuclei (3LAC).
+#' Ackermann, M. et al., The Astrophysical Journal, 810, 14 (2015).
+#'
+#' High Galactic Latitude (|GLAT| > 10 deg.) Sources.
+#'
+#' @format A data frame with 26 variables on 1591 gamma-ray sources.
+#' @section Fields: 
+#' \describe{
+#' \item{\code{Source_Name}}{1FIG JHHMM.m+DDMM, constructed according to IAU Specifications for Nomenclature; 
+#' m is decimal minutes of R.A.; in the name R.A. and decl. are truncated at 0.1 decimal minutes and 1' , respectively}
+#' \item{GLON}{Galactic Longitude, degrees}
+#' \item{GLAT}{Galactic Latitude, degrees}
+#' \item{ASSOC_3FGL}{3FGL Source Name (JHHMM.m+DDMM)}
+#' \item{VHE}{Display this very-high-energy AGN data (table10)}
+#' \item{Cln}{Source in Clean sample: Y=Yes, N=No}
+#' \item{CName}{Name of the counterpart source}
+#' \item{RAJ2000}{Radio counterpart right Ascension (J2000)}
+#' \item{DEJ2000}{Radio counterpart declination (J2000)}
+#' \item{Sep}{Angular separation with counterpart source, deg.}
+#' \item{PosErr}{95\% error radius, deg.}
+#' \item{SpCl}{Optical class (G1)}
+#' \item{SEDCl}{SED class}
+#' \item{lognu}{Log frequency of observer-frame position of synchrotron peak (NupSyn-Meas)}
+#' \item{lognuRf}{Log frequency of rest-frame position of synchrotron peak (NupSyn-Rf)}
+#' \item{z}{Redshift}
+#' \item{Prob}{Bayesian probability}
+#' \item{LR.RG}{Likelihood Ratio reliability for Radio-gamma-ray association}
+#' \item{LR.XGP}{Likelihood Ratio reliability for X-ray-gamma-ray association}
+#' \item{logCpt}{Compton Dominance in log scale}
+#' \item{FRad}{Radio flux}
+#' \item{n_FRad}{Flag on FRad}
+#' \item{FX}{X-ray flux; units of 1e-13erg/cm2/s}
+#' \item{Vmag1}{USNO V band magnitude}
+#' \item{Vmag2}{SDSS V band magnitude}
+#' \item{ARO}{Rest frame, broadband radio-optical spectral index}
+#' \item{AOX}{Rest frame, broadband optical-X-ray spectral index}
+#' }
+#' @source \url{http://adsabs.harvard.edu/abs/2015ApJ...810...14A}
+"LAC3_HI"
+
+#' 1FIG (First Fermi-LAT Inner Galaxy point source Catalog)
+#'
+#' First Fermi-LAT Inner Galaxy point source Catalog (1FIG).
+#' Ajello, M. et al., The Astrophysical Journal, 819, 44 (2016).
+#'
+#' Results from Table 3 and Table 7 of the journal article.
+#'
+#' @format A data frame with 31 variables on 48 gamma-ray sources.
+#' @section Fields: 
+#' \describe{
+#' \item{\code{Source_Name}}{1FIG JHHMM.m+DDMM, constructed according to IAU Specifications for Nomenclature; 
+#' m is decimal minutes of R.A.; in the name R.A. and decl. are truncated at 0.1 decimal minutes and 1' , respectively}
+#' \item{GLON}{Galactic Longitude, degrees}
+#' \item{GLAT}{Galactic Latitude, degrees}
+#' \item{dTH}{Deltatheta, 95\% confidence region, deg}
+#' \item{TS}{Test Statistic}
+#' \item{F_PSR_INT}{1-100 GeV flux, Pulsars Intensity-scaled, 10^{-9} ph cm^{-2} s^{-1}}
+#' \item{F_PSR_IND}{1-100 GeV flux, Pulsars Index-scaled, 10^{-9} ph cm^{-2} s^{-1}}
+#' \item{F_PSR_INT}{1-100 GeV flux, OBstars Intensity-scaled, 10^{-9} ph cm^{-2} s^{-1}}
+#' \item{F_PSR_INT}{1-100 GeV flux, OBstars Index-scaled, 10^{-9} ph cm^{-2} s^{-1}}
+#' \item{TYPE}{Spectral type, PowerLaw (PL) or LogParabola (LP)}
+#' \item{A_PSR_INT}{alpha, Pulsars Intensity-scaled, for spectral model dN/dE ~ (E/Eb)^{-alpha -beta*log(E/Eb)}}
+#' \item{UNC_A_PSR_INT}{uncertainty in alpha, Pulsars Intensity-scaled}
+#' \item{B_PSR_INT}{beta, Pulsars Intensity-scaled, for spectral model dN/dE ~ (E/Eb)^{-alpha -beta*log(E/Eb)}}
+#' \item{UNC_B_PSR_INT}{uncertainty in beta, Pulsars Intensity-scaled}
+#' \item{EB_PSR_INT}{Eb, Pulsars Intensity-scaled, for spectral model dN/dE ~ (E/Eb)^{-alpha -beta*log(E/Eb)}}
+#' \item{A_PSR_IND}{alpha, Pulsars Index-scaled, for spectral model dN/dE ~ (E/Eb)^{-alpha -beta*log(E/Eb)}}
+#' \item{UNC_A_PSR_IND}{uncertainty in alpha, Pulsars Index-scaled}
+#' \item{B_PSR_IND}{beta, Pulsars Index-scaled, for spectral model dN/dE ~ (E/Eb)^{-alpha -beta*log(E/Eb)}}
+#' \item{UNC_B_PSR_IND}{uncertainty in beta, Pulsars Index-scaled}
+#' \item{EB_PSR_IND}{Eb, Pulsars Index-scaled, for spectral model dN/dE ~ (E/Eb)^{-alpha -beta*log(E/Eb)}}
+#' \item{A_OB_INT}{alpha, OBstars Intensity-scaled, for spectral model dN/dE ~ (E/Eb)^{-alpha -beta*log(E/Eb)}}
+#' \item{UNC_A_OB_INT}{uncertainty in alpha, OBstars Intensity-scaled}
+#' \item{B_OB_INT}{beta, OBstars Intensity-scaled, for spectral model dN/dE ~ (E/Eb)^{-alpha -beta*log(E/Eb)}}
+#' \item{UNC_B_OB_INT}{uncertainty in beta, OBstars Intensity-scaled}
+#' \item{EB_OB_INT}{Eb, OBstars Intensity-scaled, for spectral model dN/dE ~ (E/Eb)^{-alpha -beta*log(E/Eb)}}
+#' \item{A_OB_IND}{alpha, OBstars Index-scaled, for spectral model dN/dE ~ (E/Eb)^{-alpha -beta*log(E/Eb)}}
+#' \item{UNC_A_OB_IND}{uncertainty in alpha, OBstars Index-scaled}
+#' \item{B_OB_IND}{beta, OBstars Index-scaled, for spectral model dN/dE ~ (E/Eb)^{-alpha -beta*log(E/Eb)}}
+#' \item{UNC_B_OB_IND}{uncertainty in beta, OBstars Index-scaled}
+#' \item{EB_OB_IND}{Eb, OBstars Index-scaled, for spectral model dN/dE ~ (E/Eb)^{-alpha -beta*log(E/Eb)}}
+#' \item{ASSOC_3FGL}{3FGL association}
+#' }
+#' @source \url{http://iopscience.iop.org/article/10.3847/0004-637X/819/1/44/meta}
+"FIG1"
+
+#' 1DF Catalog (First D3PO Fermi catalog of gamma-ray source candidates)
+#'
+#' The Denoised, Deconvolved, and Decomposed Fermi Gamma-ray Sky: An application of the D3PO algorithm
+#' Selig, M. et al., Astronomy and Astrophysics, 581, 126 (2015).
+#'
+#'FITS Filename: catalog_1.fits
+#'
+#' @format A data frame with 48 variables on 3106 gamma-ray sources.
+#' @section Fields: 
+#' \describe{
+#' \item{CandidateName}{Candidate Name}
+#' \item{GLON}{Galactic Longitude, deg.}
+#' \item{GLAT}{Galactic Latitude, deg.}
+#' \item{Flux}{Total flux between 1-100 GeV, photon cm^{-2} s^{-1}}
+#' \item{Emid1}{Contributing energy band 1, T/F, Emin=0.60 GeV, Emid=0.85 GeV, Max=1.20 GeV}
+#' \item{Emid2}{Contributing energy band 2, T/F, Emin=1.20 GeV, Emid=1.70 GeV, Max=2.40 GeV}
+#' \item{Emid3}{Contributing energy band 3, T/F, Emin=2.40 GeV, Emid=3.40 GeV, Max=4.80 GeV}
+#' \item{Emid4}{Contributing energy band 4, T/F, Emin=4.80 GeV, Emid=6.79 GeV, Max=9.60 GeV}
+#' \item{Emid5}{Contributing energy band 5, T/F, Emin=9.60 GeV, Emid=13.58 GeV, Max=19.20 GeV}
+#' \item{Emid6}{Contributing energy band 6, T/F, Emin=19.20 GeV, Emid=27.15 GeV, Max=38.40 GeV}
+#' \item{Emid7}{Contributing energy band 7, T/F, Emin=38.40 GeV, Emid=54.31 GeV, Max=76.80 GeV}
+#' \item{Emid8}{Contributing energy band 8, T/F, Emin=76.80 GeV, Emid=108.61 GeV, Max=153.60 GeV}
+#' \item{Emid9}{Contributing energy band 9, T/F, Emin=153.60 GeV, Emid=217.22 GeV, Max=307.20 GeV}
+#' \item{Distance1}{Distance1, deg.}
+#' \item{Association1a}{Primary association}
+#' \item{Association1b}{Association1b}
+#' \item{Association1c}{Association1c}
+#' \item{Distance2}{Distance2, deg.}
+#' \item{Association2a}{Association2a}
+#' \item{Association2b}{Association2b}
+#' \item{Association2c}{Association2c}
+#' \item{Distance3}{Distance3, deg.}
+#' \item{Association3a}{Association3a}
+#' \item{Association3b}{Association3b}
+#' \item{Association3c}{Association3c}
+#' \item{Distance4}{Distance4, deg.}
+#' \item{Association4a}{Association4a}
+#' \item{Association4b}{Association4b}
+#' \item{Association4c}{Association4c}
+#' \item{Chi2_PL}{Chi-squared (power-law fit), See Equation (2) of Selig et al. (2015)}
+#' \item{Chi2_LP}{Chi-squared (log-parabola fit), See Equation (3) of Selig et al. (2015)}
+#' \item{Chi2_EXP}{Chi-squared (exponential cut-off fit), See Equation (4) of Selig et al. (2015)}
+#' \item{Gamma_PL}{Spectral index (power-law fit), See Equation (2) of Selig et al. (2015)}
+#' \item{Unc_Gamma_PL}{Uncertainty in the spectral index (power-law fit), See Equation (2) of Selig et al. (2015)}
+#' \item{Gamma_LP}{Spectral index (log-parabola fit), See Equation (3) of Selig et al. (2015)}
+#' \item{Unc_Gamma_LP}{Uncertainty in the spectral index (log-parabola fit), See Equation (3) of Selig et al. (2015)}
+#' \item{Gamma_EXP}{Spectral index (exponential cut-off fit), See Equation (4) of Selig et al. (2015)}
+#' \item{Unc_Gamma_EXP}{Uncertainty in the spectral index (exponential cut-off fit), See Equation (4) of Selig et al. (2015)}
+#' \item{K_PL}{Normalization (power-law fit), See Equation (2) of Selig et al. (2015)}
+#' \item{Unc_K_PL}{Uncertainty in the normalization (power-law fit), See Equation (2) of Selig et al. (2015)}
+#' \item{K_LP}{Normalization (log-parabola fit), See Equation (3) of Selig et al. (2015)}
+#' \item{Unc_K_LP}{Uncertainty in the normalization (log-parabola fit), See Equation (3) of Selig et al. (2015)}
+#' \item{K_EXP}{Normalization (exponential cut-off fit), See Equation (4) of Selig et al. (2015)}
+#' \item{Unc_K_EXP}{Uncertainty in the normalization (exponential cut-off fit), See Equation (4) of Selig et al. (2015)}
+#' \item{Beta_LP}{Beta index (log-parabola fit), See Equation (3) of Selig et al. (2015)}
+#' \item{Unc_Beta_LP}{Uncertainty in the Beta index (log-parabola fit), See Equation (3) of Selig et al. (2015)}
+#' \item{Ec_EXP}{Energy cut-off (exponential cut-off fit), See Equation (4) of Selig et al. (2015)}
+#' \item{Unc_Ec_EXP}{Uncertainty in the energy cut-off (exponential cut-off fit), See Equation (4) of Selig et al. (2015)}
+#' }
+#' @source \url{http://wwwmpa.mpa-garching.mpg.de/ift/fermi/}
+"DF1"
+
 #' pulsars (Public List of LAT-Detected Gamma-Ray Pulsars)
 #'
 #' Fermi Large Area Telescope List of Detected Pulsars
 #' https://confluence.slac.stanford.edu/display/GLAMCOG/Public+List+of+LAT-Detected+Gamma-Ray+Pulsars
 #' 
-#' Last Updated: 2014-11-06
+#' Last Updated: 2016-02-22
 #'
-#' @format A data frame with 7 variables on 161 gamma-ray pulsars: 
+#' @format A data frame with 8 variables on 205 gamma-ray pulsars: 
 #' @section Fields: 
 #' \describe{
 #' \item{PSR}{Pulsar name, PSR JHHMM+DDMM, constructed using the RA and Dec}
@@ -429,6 +681,7 @@ NULL
 #' u=Discovered using a Fermi-LAT seed position,
 #' x=Discovered in the x-ray and/or Gamma-ray pulsations detected using the X-ray ephemeris.}
 #' \item{Refs}{References (see web page for details)}
+#' \item{date_public}{Date made public (all gamma-ray pulsars announced prior to 2016 are listed as being announced 2014-11-06)}
 #' }
 #' @source \url{https://confluence.slac.stanford.edu/display/GLAMCOG/Public+List+of+LAT-Detected+Gamma-Ray+Pulsars}
 "pulsars"

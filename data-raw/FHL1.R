@@ -7,6 +7,6 @@ if (!file.exists("data-raw/gll_psch_v07.fit")) {
         download.file(FHL1Url, destfile = "data-raw/gll_psch_v07.fit", method="curl")
 }
 
-# Read the 1FGL FITS file into a data frame
+# Read the 1FHL FITS file into a data frame
 FHL1 <- tbl_df(readFrameFromFITS("data-raw/gll_psch_v07.fit", hdu = 1))
 save(FHL1, file = "data/FHL1.rdata", compress = "xz")
