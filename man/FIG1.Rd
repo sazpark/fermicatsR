@@ -6,7 +6,7 @@
 \title{1FIG (First Fermi-LAT Inner Galaxy point source Catalog)}
 \format{A data frame with 31 variables on 48 gamma-ray sources.}
 \source{
-\url{http://iopscience.iop.org/article/10.3847/0004-637X/819/1/44/meta}
+\url{http://adsabs.harvard.edu/abs/2016ApJ...819...44A}
 }
 \usage{
 FIG1

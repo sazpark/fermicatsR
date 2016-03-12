@@ -592,7 +592,7 @@ NULL
 #' \item{EB_OB_IND}{Eb, OBstars Index-scaled, for spectral model dN/dE ~ (E/Eb)^{-alpha -beta*log(E/Eb)}}
 #' \item{ASSOC_3FGL}{3FGL association}
 #' }
-#' @source \url{http://iopscience.iop.org/article/10.3847/0004-637X/819/1/44/meta}
+#' @source \url{http://adsabs.harvard.edu/abs/2016ApJ...819...44A}
 "FIG1"
 
 #' 1DF Catalog (First D3PO Fermi catalog of gamma-ray source candidates)
